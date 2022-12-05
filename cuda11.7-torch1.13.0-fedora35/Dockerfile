@@ -1,4 +1,4 @@
-FROM fedora:33
+FROM fedora:35
 MAINTAINER Jin Choi	<choij@cern.ch>
 
 WORKDIR /root
@@ -7,11 +7,11 @@ RUN dnf install util-linux-user -y
 RUN dnf groupinstall "Development Tools" -y
 
 # Install cuda packages
-ADD cuda-repo-fedora33-11-3-local-11.3.0_465.19.01-1.x86_64.rpm /root/cuda-repo-fedora33-11-3-local-11.3.0_465.19.01-1.x86_64.rpm
-RUN rpm -i cuda-repo-fedora33-11-3-local-11.3.0_465.19.01-1.x86_64.rpm
+ADD cuda-repo-fedora35-11-7-local-11.7.0_515.43.04-1.x86_64.rpm /root/cuda-repo-fedora35-11-7-local-11.7.0_515.43.04-1.x86_64.rpm
+RUN rpm -i cuda-repo-fedora35-11-7-local-11.7.0_515.43.04-1.x86_64.rpm
 RUN dnf clean all
 RUN dnf install cuda -y
-RUN rm cuda-repo-fedora33-11-3-local-11.3.0_465.19.01-1.x86_64.rpm
+RUN rm cuda-repo-fedora35-11-7-local-11.7.0_515.43.04-1.x86_64.rpm
 
 ADD cudnn-linux-x86_64-8.6.0.163_cuda11-archive /root/cudnn-linux-x86_64-8.6.0.163_cuda11-archive
 RUN cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include
@@ -31,3 +31,8 @@ ADD install.sh /root/install.sh
 RUN chmod +x install.sh
 RUN ./install.sh
 RUN rm install.sh
+
+# entrypoint
+ADD entrypoint.sh /root/entrypoint.sh
+RUN chmod +x entrypoint.sh
+ENTRYPOINT ["/root/entrypoint.sh"]
