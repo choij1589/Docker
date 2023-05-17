@@ -1,8 +1,10 @@
 */cuda-repo-fedora33-11-3-local-11.3.0_465.19.01-1.x86_64.rpm
 */cuda-repo-fedora35-11-7-local-11.7.0_515.43.04-1.x86_64.rpm
+*/cuda-repo-fedora35-11-8-local-11.8.0_520.61.05-1.x86_64.rpm
 */cudnn-linux-x86_64-8.5.0.96_cuda11-archive.tar.xz
 */cudnn-linux-x86_64-8.6.0.163_cuda11-archive.tar.xz
 */cudnn-linux-x86_64-8.5.0.96_cuda11-archive
 */cudnn-linux-x86_64-8.6.0.163_cuda11-archive
+*/cudnn-linux-x86_64-8.8.1.3_cuda11-archive.tar.xz
 */Miniconda3-py39_4.12.0-Linux-x86_64.sh
 */Miniconda3-latest-Linux-x86_64.sh
