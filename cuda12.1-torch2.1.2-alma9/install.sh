@@ -7,10 +7,10 @@ conda create -n pyg -c conda-forge python=3.11 root -y
 conda activate pyg
 
 # install torch & torch_geometric
-pip install torch --index-url https://download.pytorch.org/whl/cu118
+pip install torch
 pip install torch_geometric
-pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
-pip install python-telegram-bot
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.1.0+cu121.html
 
 # install other packages
-pip install numpy pandas matplotlib scikit-learn
+pip install numpy pandas matplotlib scipy scikit-learn seaborn captum networkx
+pip install python-telegram-bot
