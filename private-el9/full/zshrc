@@ -83,8 +83,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting alias-tips)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export X509_CERT_DIR=/cvmfs/grid.cern.ch/etc/grid-security/certificates
-export X509_VOMS_DIR=/cvmfs/grid.cern.ch/etc/grid-security/vomsdir
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
